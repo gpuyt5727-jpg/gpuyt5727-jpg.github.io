@@ -15,6 +15,9 @@ h1 {
 	margin: 0 auto;
 	padding: 0 1rem;
 	background-color:lightcyan ;
+	position: fixed; 
+	top: 10px;    
+	z-index: 1000;  
 }
 p {
 	font-size: 2rem;
