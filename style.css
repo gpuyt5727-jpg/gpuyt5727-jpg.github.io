@@ -17,6 +17,7 @@ p {
 a {
 	font-size: 2rem;
 	color: black;
+	display: block;
 	width: 300px;
 	margin: 0 auto; 
 }
