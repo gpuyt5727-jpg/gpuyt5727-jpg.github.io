@@ -7,14 +7,14 @@ body {
 	background-size: 40px 40px;
 }
 h1 {
-	border: 2px solid green;
+	border: 2px solid cyan;
 	border-radius: 8px;
 	font-size: 3rem;
 	text-align: center;
 	width: fit-content;
 	margin: 0 auto;
 	padding: 0 1rem;
-
+	background-color:lightcyan ;
 }
 p {
 	font-size: 2rem;
