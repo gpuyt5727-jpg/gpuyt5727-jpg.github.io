@@ -14,4 +14,8 @@ p {
 	font-size: 30rem;
 	text-align: center;
 }
-
+a {
+	font-size: 20rem;
+	text-align: center;
+	color: black;
+}
