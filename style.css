@@ -1,4 +1,14 @@
 @charset "UTF-8";
+body::before {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 7rem;
+	background:rgba(255, 255, 255, 0.8);
+	z-index: 5;
+}
 body {
 	margin: 0;
 	padding: 0;
@@ -7,16 +17,17 @@ body {
 	background-size: 40px 40px;
 }
 h1 {
+	margin: 0 auto 2rem;
 	border: 2px solid cyan;
 	border-radius: 8px;
 	font-size: 3rem;
 	text-align: center;
 	width: fit-content;
-	margin: 0 auto;
 	padding: 0 1rem;
 	background-color:lightcyan ;
 	position: sticky;
 	top: 10px;
+	z-index:10;
 }
 p {
 	font-size: 2rem;
