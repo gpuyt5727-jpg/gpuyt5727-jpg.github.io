@@ -18,7 +18,10 @@ nav a {
 	display: inline;
 	width: auto;
 	margin: 0;
-	font-size: 1.2rem;
+	font-size: 2rem;
+    border: 29x solid cyan;
+	border-radius: 8px
+	background-color:lightsyan
 }
 body {
 	margin: 0;
