@@ -11,6 +11,9 @@ h1 {
 	border-radius: 8px;
 	font-size: 3rem;
 	text-align: center;
+	width: fit-content;
+	margin: 0 auto;
+
 }
 p {
 	font-size: 2rem;
