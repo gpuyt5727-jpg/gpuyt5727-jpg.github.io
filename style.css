@@ -5,24 +5,24 @@ nav {
 	left: 0;
 	right: 0;
 	height: 7rem;
-	background: rgba(255, 255, 255, 0.8);
+	background: rgba(224, 255, 255, 0.8);
 	z-index: 5;
 	display: flex;
 	justify-content: flex-start;
-	align-items: center;
-	gap: 1.5rem;
-	padding: 0 1.5rem;
-
 }
 nav a {
-	display: inline;
+	display: flex;
+		align-items: center;
+
 	width: auto;
 	margin: 0;
 	font-size: 3rem;
-    border: 2px solid cyan;
-	border-radius: 8px;
-	background-color:lightcyan;
 	padding: 0 1rem;
+	text-decoration: none;
+	transition-duration:0.3s;
+}
+nav a:hover{
+	background-color: rgb(244 255 255);
 }
 body {
 	margin: 0;
@@ -38,11 +38,11 @@ h1 {
 	font-size: 3rem;
 	text-align: center;
 	width: fit-content;
-	padding: 0 1rem;
 	background-color:lightcyan ;
 	position: sticky;
 	top: 10px;
 	z-index:10;
+	padding: 0 1rem;
 }
 p {
 	font-size: 2rem;
