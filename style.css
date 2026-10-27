@@ -27,7 +27,7 @@ nav a:hover{
 nav a[aria-current="page"]{
 	background-color:black;
 	color:white;
-	
+}
 body {
 	margin: 0;
 	padding: 0;
