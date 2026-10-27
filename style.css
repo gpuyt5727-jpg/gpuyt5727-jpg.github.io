@@ -28,6 +28,7 @@ nav a[aria-current="page"]{
 	background-color:black;
 	color:white;
 	pointer-events: none;
+	transition: none;
 }
 body {
 	margin: 0;
