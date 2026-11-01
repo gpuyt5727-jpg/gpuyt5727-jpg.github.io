@@ -53,6 +53,7 @@ h1 {
 p {
 	font-size: 2rem;
 	text-align: center;
+	
 }
 a {
 	font-size: 2rem;
@@ -61,4 +62,11 @@ a {
 	width: 300px;
 	margin: 0 auto; 
 	text-align: center;
+}
+
+#btn, #count {
+	font-size: 1.5rem;
+}
+#btn {
+    border-radius: 0.5rem; 
 }
