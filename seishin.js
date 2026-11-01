@@ -6,4 +6,4 @@ btn.addEventListener('click',() => {
 
 setInterval(() => {
   text.textContent += '精神';
-},1000);
+},100);
