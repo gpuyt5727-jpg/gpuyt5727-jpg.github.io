@@ -3,7 +3,7 @@ const text = document.querySelector('#text');
 const count = document.querySelector('#count');
 const upBtn = document.querySelector('#up');
 const word = '精神';
-const cost = 10;
+let cost = 10;
 let once = 0;
 let total = 0;
 let rate = 1;
@@ -31,6 +31,7 @@ upBtn.addEventListener('click', () => {
   total -= cost;
   text.textContent = text.textContent.slice(0, -word.length * cost);
   rate++;
+  cost = cost*1.1
   updateCount();
   updateUp();
 });
