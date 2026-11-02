@@ -101,9 +101,12 @@ a {
 #menu-btn {
 	display: block;
 	height: var(--nav-h);
+	width: 3rem;
 	text-align: left;
 	font-size: 3rem;
 	align-self: flex-start;
+	background: transparent;
+	border: none;
 }
   nav a {
     display: none;
