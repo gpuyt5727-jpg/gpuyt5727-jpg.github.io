@@ -100,9 +100,10 @@ a {
   }
 #menu-btn {
 	display: block;
-	height: 2rem;
+	height: var(--nav-h);
 	text-align: left;
-	font-size: 2rem;
+	font-size: 3rem;
+	align-self: flex-start;
 }
   nav a {
     display: none;
