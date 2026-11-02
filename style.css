@@ -10,6 +10,10 @@ nav {
 	display: flex;
 	justify-content: flex-start;
 }
+#menu-btn {
+	display: none;
+}
+
 nav a {
 	display: flex;
 	align-items: center;
@@ -36,6 +40,7 @@ body {
 	background: #fff;
 	background-size: 40px 40px;
 }
+
 h1 {
 	margin: 0 auto 2rem;
 	border: 2px solid cyan;
@@ -80,4 +85,25 @@ a {
 	left: 100%;
 	font-size: 1.2rem;
 	white-space: nowrap;
+}
+
+@media (max-width: 700px)  {
+  nav {
+    flex-direction: column;
+	height: auto;
+	overflow: visible;
+  }
+#menu-btn {
+	display: block;
+	height: 2rem;
+	text-align: left;
+	font-size: 2rem;
+}
+  nav a {
+    display: none;
+  }
+nav.open a{
+	display: flex;
+	height: 3.5rem;
+}
 }
