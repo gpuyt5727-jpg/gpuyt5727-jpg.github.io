@@ -101,13 +101,20 @@ a {
 #menu-btn {
 	display: block;
 	height: var(--nav-h);
-	width: 3rem;
+	width: 4rem;
 	text-align: center;
 	font-size: 3rem;
 	align-self: flex-start;
 	background: transparent;
 	border: none;
+	padding: 0;
+	transition-duration:0.3s;
 }
+　　@media (hover: hover) {
+　　　　#menu-btn:hover {
+　　　　　　background-color: rgb(244 255 255);
+		}
+
   nav a {
     display: none;
   }
