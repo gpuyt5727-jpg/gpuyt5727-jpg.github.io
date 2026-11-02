@@ -38,14 +38,14 @@ upBtn.addEventListener('click', () => {
   updateUp();
 });
 upmaxBtn.addEventListener('click', () => {
-  let spent = 0;    //spentという変数を宣言。初期値は0
+  let spent = 0;    
   while (total >= cost) {  
-    total -= cost;  //精神の量（数字）を減らす
-    spent += cost;  //spentに減らした精神の量を増やす
-    rate++;         //一度に増える量を1増やす
+    total -= cost;  
+    spent += cost;  
+    rate++;         
     cost = Math.round(cost * 1.1);
   };
-  if (spent === 0) return;  //何も買えなかった場合不具合が起こる可能性があるため
+  if (spent === 0) return; 
   text.textContent = text.textContent.slice(0, -word.length * spent);
   updateCount();
   updateUp();
