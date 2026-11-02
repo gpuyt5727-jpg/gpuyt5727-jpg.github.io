@@ -12,8 +12,7 @@ nav {
 }
 nav a {
 	display: flex;
-		align-items: center;
-
+	align-items: center;
 	width: auto;
 	margin: 0;
 	font-size: 3rem;
