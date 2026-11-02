@@ -31,7 +31,7 @@ upBtn.addEventListener('click', () => {
   total -= cost;
   text.textContent = text.textContent.slice(0, -word.length * cost);
   rate++;
-  cost = cost*1.1
+  cost = Math.round(cost*1.1);
   updateCount();
   updateUp();
 });
