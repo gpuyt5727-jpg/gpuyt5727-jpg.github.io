@@ -19,6 +19,19 @@ function updateUp() {
   upBtn.disabled = total < cost;
   upmaxBtn.disabled = total < cost;
 }
+function buyupmax() {
+  let spent = 0;    
+  while (total >= cost) {  
+    total -= cost;  
+    spent += cost;  
+    rate++;         
+    cost = Math.round(cost * 1.1);
+  };
+  if (spent === 0) return; 
+  text.textContent = text.textContent.slice(0, -word.length * spent);
+  updateCount();
+  updateUp();
+}
 updateUp();
 updateCount();
 updateLabel();
@@ -37,18 +50,10 @@ upBtn.addEventListener('click', () => {
   updateCount();
   updateUp();
 });
-upmaxBtn.addEventListener('click', () => {
-  let spent = 0;    
-  while (total >= cost) {  
-    total -= cost;  
-    spent += cost;  
-    rate++;         
-    cost = Math.round(cost * 1.1);
-  };
-  if (spent === 0) return; 
-  text.textContent = text.textContent.slice(0, -word.length * spent);
-  updateCount();
-  updateUp();
+upmaxBtn.addEventListener('click', buyupmax());
+
+document.addEventListener('keydown', (e) => {
+   if (e.key === 'm') buyupmax();
 });
 setInterval(() => {
   text.textContent += word;
