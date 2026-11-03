@@ -50,7 +50,7 @@ upBtn.addEventListener('click', () => {
   updateCount();
   updateUp();
 });
-upmaxBtn.addEventListener('click', buyupmax());
+upmaxBtn.addEventListener('click', buyupmax);
 
 document.addEventListener('keydown', (e) => {
    if (e.key === 'm') buyupmax();
