@@ -63,7 +63,7 @@ h1 {
 	animation: rainbow 8s linear infinite;
 }
 .happy p {
-	animation: fontsizechange 4s ease infinite;
+	animation: fontsizechange 4s ease infinite, fontposchange 4s ease-in-out infinite;
 }
 
 @keyframes rainbow {
@@ -74,11 +74,14 @@ h1 {
 	100% { background-color: hsl(360, 100%, 85%); }
 }
 @keyframes fontsizechange {
-	0%   { font-size: 1rem; }
-	25%  { font-size: 2rem; }
+	0%, 100%   { font-size: 1rem; }
+	25%, 75%  { font-size: 2rem; }
 	50%  { font-size: 3rem; }
-	75%  { font-size: 2rem; }
-	100% { font-size: 1rem; }
+}
+
+@keyframes fontposchange {
+	0%, 100% { transform: translateX(1rem);}
+	50%      { transform: translateX(-1rem); }
 }
 
 p {
