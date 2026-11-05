@@ -62,7 +62,7 @@ h1 {
 .happy {
 	animation: rainbow 8s linear infinite;
 }
-p {
+.happy p {
 	animation: fontsizechange 4s ease infinite;
 }
 
