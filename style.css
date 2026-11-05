@@ -62,6 +62,9 @@ h1 {
 .happy {
 	animation: rainbow 8s linear infinite;
 }
+p {
+	animation: fontsizechange 4s ease infinite;
+}
 
 @keyframes rainbow {
 	0%   { background-color: hsl(0, 100%, 85%); }
@@ -70,6 +73,14 @@ h1 {
 	75%  { background-color: hsl(270, 100%, 85%); }
 	100% { background-color: hsl(360, 100%, 85%); }
 }
+@keyframes fontsizechange {
+	0%   { font-size: 1rem; }
+	25%  { font-size: 2rem; }
+	50%  { font-size: 3rem; }
+	75%  { font-size: 2rem; }
+	100% { font-size: 1rem; }
+}
+
 p {
 	font-size: 2rem;
 	text-align: center;
