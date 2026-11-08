@@ -23,4 +23,25 @@ function beep() {
   osc.start();
   osc.stop(ac.currentTime + 0.5);
 }
+function siren() {
+　ac.resume();
+  const osc = ac.createOscillator();
+  const gain = ac.createGain();
+  const pan = ac.createStereoPanner();
+  osc.type = 'sawtooth';
+  osc.frequency.setValueAtTime(300, t);
+  osc.frequency.linearRampToValueAtTime(1200, t + 1);
+  osc.frequency.linearRampToValueAtTime(300, t + 2);
+  pan.pan.setValueAtTime(-1, t);
+  pan.pan.linearRampToValueAtTime(1, t + 2);
+　gain.gain.setValueAtTime(0.15, t);
+　gain.gain.linearRampToValueAtTime(0, t + 2);
+
+  osc.connect(gain);
+  gain.connect(pan);
+  pan.connect(ac.destination);
+  osc.start(t);
+  osc.stop(t + 2);
+};
 document.querySelector('#sound').addEventListener('click',beep);
+document.querySelector('#siren').addEventListener('click',siren);
