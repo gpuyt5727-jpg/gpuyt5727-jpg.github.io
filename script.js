@@ -25,6 +25,7 @@ function beep() {
 }
 function siren() {
 　ac.resume();
+  const t = ac.currentTime;
   const osc = ac.createOscillator();
   const gain = ac.createGain();
   const pan = ac.createStereoPanner();
