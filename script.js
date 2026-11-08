@@ -10,6 +10,32 @@ document.querySelectorAll('nav a').forEach(a=>{
 menubtn.addEventListener('click',() =>{
   nav.classList.toggle('open');
 });
+const dangerBtn = document.querySelector('#danger');
+const gaugeBar = document.querySelector('#gauge-bar');
+let timer = null;
+
+
+
+function startHold() {
+  gaugeBar.classList.add('holding');
+  timer = setTimeout(() => {
+    gaugeBar.classList.remove('holding');
+    timer = null;
+    alert('実行しました！');
+  }, 2000);
+}
+
+function cancelHold() {
+  if (timer === null) return;
+  clearTimeout(timer);
+  timer = null;
+  gaugeBar.classList.remove('holding');
+}
+
+dangerBtn.addEventListener('pointerdown', startHold);
+dangerBtn.addEventListener('pointerup', cancelHold);
+dangerBtn.addEventListener('pointerleave', cancelHold);
+
 function beep() {
   ac.resume();
   const osc = ac.createOscillator();
