@@ -97,7 +97,25 @@ a {
 	margin: 0 auto; 
 	text-align: center;
 }
-
+#danger {
+	touch-action: none;
+	user-select: none;
+}
+#gauge {
+	width: 300px;
+	height: 10px;
+	background: #ddd;
+	margin: 0.5rem auto;
+}
+#gauge-bar {
+	height: 100%;
+	width: 0;
+	background: red;
+}
+#gauge-bar.holding {
+	width: 100%;
+	transition: width 2s linear;
+}
 #btn, #count {
 	font-size: 1.5rem;
 }
