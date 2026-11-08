@@ -31,7 +31,9 @@ function siren() {
   const pan = ac.createStereoPanner();
   osc.type = 'sawtooth';
   osc.frequency.setValueAtTime(300, t);
-  osc.frequency.linearRampToValueAtTime(1200, t + 4);
+  osc.frequency.linearRampToValueAtTime(1200, t + 2);
+  osc.frequency.linearRampToValueAtTime(300, t + 4);
+  osc.frequency.linearRampToValueAtTime(1200, t + 6);
   osc.frequency.linearRampToValueAtTime(300, t + 8);
   pan.pan.setValueAtTime(-1, t);
   pan.pan.linearRampToValueAtTime(1, t + 2);
