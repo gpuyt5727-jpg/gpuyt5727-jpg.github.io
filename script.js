@@ -31,18 +31,21 @@ function siren() {
   const pan = ac.createStereoPanner();
   osc.type = 'sawtooth';
   osc.frequency.setValueAtTime(300, t);
-  osc.frequency.linearRampToValueAtTime(1200, t + 1);
-  osc.frequency.linearRampToValueAtTime(300, t + 2);
+  osc.frequency.linearRampToValueAtTime(1200, t + 4);
+  osc.frequency.linearRampToValueAtTime(300, t + 4);
   pan.pan.setValueAtTime(-1, t);
   pan.pan.linearRampToValueAtTime(1, t + 2);
-　gain.gain.setValueAtTime(0.15, t);
-　gain.gain.linearRampToValueAtTime(0, t + 2);
+  pan.pan.linearRampToValueAtTime(-1, t + 4);
+  pan.pan.linearRampToValueAtTime(1, t + 6);
+  pan.pan.linearRampToValueAtTime(-1, t + 8);
+　gain.gain.setValueAtTime(0.3, t);
+　gain.gain.linearRampToValueAtTime(0, t + 8);
 
   osc.connect(gain);
   gain.connect(pan);
   pan.connect(ac.destination);
   osc.start(t);
-  osc.stop(t + 2);
+  osc.stop(t + 8);
 };
 document.querySelector('#sound').addEventListener('click',beep);
 document.querySelector('#siren').addEventListener('click',siren);
