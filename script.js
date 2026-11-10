@@ -78,7 +78,7 @@ function siren() {
   gain.connect(pan);
   pan.connect(ac.destination);
   osc.start(t);
-
+  osc.stop(t + 8);
 };
 
 const guessInput = document.querySelector('#guess');
@@ -100,7 +100,6 @@ goBtn.addEventListener('click', () => {
     msg.textContent = `正解！${count}回目で当てられたね！`;
   }
 });
-  osc.stop(t + 8);
 
 document.querySelector('#sound').addEventListener('click',beep);
 document.querySelector('#siren').addEventListener('click',siren);
