@@ -91,7 +91,7 @@ let timesc = 0;
 goBtn.addEventListener('click', () => {
   const n = Number(guessInput.value);
   timesc++;
-
+  beep();
   if (n < answer) {
     msg.textContent = '答えより小さいよ！';
   } else if (n > answer) {
