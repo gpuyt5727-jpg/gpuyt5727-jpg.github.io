@@ -78,6 +78,28 @@ function siren() {
   gain.connect(pan);
   pan.connect(ac.destination);
   osc.start(t);
+
+
+
+const guessInput = document.querySelector('#guess');
+const goBtn = document.querySelector('#go');
+const msg = document.querySelector('#msg');
+
+const answer = Math.floor(Math.random() * 100) + 1;
+let count = 0;
+
+goBtn.addEventListener('click', () => {
+  const n = Number(guessInput.value);
+  count++;
+
+  if (n < answer) {
+    msg.textContent = '答えより小さいよ！';
+  } else if (n > answer) {
+    msg.textContent = '答えより大きいよ！';
+  } else {
+    msg.textContent = `正解！${count}回目で当てられたね！`;
+  }
+});
   osc.stop(t + 8);
 };
 document.querySelector('#sound').addEventListener('click',beep);
