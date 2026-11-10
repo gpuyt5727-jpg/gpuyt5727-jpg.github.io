@@ -86,18 +86,18 @@ const goBtn = document.querySelector('#go');
 const msg = document.querySelector('#msg');
 
 const answer = Math.floor(Math.random() * 100) + 1;
-let count = 0;
+let timesc = 0;
 
 goBtn.addEventListener('click', () => {
   const n = Number(guessInput.value);
-  count++;
+  timesc++;
 
   if (n < answer) {
     msg.textContent = '答えより小さいよ！';
   } else if (n > answer) {
     msg.textContent = '答えより大きいよ！';
   } else {
-    msg.textContent = `正解！${count}回目で当てられたね！`;
+    msg.textContent = `正解！${timesc}回目で当てられたね！`;
   }
 });
 
