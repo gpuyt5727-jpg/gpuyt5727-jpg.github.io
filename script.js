@@ -85,7 +85,7 @@ const guessInput = document.querySelector('#guess');
 const goBtn = document.querySelector('#go');
 const msg = document.querySelector('#msg');
 
-const answer = Math.floor(Math.random() * 100) + 1;
+let answer = Math.floor(Math.random() * 100) + 1;
 let timesc = 0;
 
 goBtn.addEventListener('click', () => {
