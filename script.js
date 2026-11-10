@@ -79,7 +79,7 @@ function siren() {
   pan.connect(ac.destination);
   osc.start(t);
 
-
+};
 
 const guessInput = document.querySelector('#guess');
 const goBtn = document.querySelector('#go');
@@ -101,6 +101,6 @@ goBtn.addEventListener('click', () => {
   }
 });
   osc.stop(t + 8);
-};
+
 document.querySelector('#sound').addEventListener('click',beep);
 document.querySelector('#siren').addEventListener('click',siren);
