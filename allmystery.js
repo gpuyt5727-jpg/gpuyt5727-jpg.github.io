@@ -2,8 +2,7 @@ const questions = [
   {q: 'こたえが分かったら下の入力欄に入力して下さい',a: 'e27cc8bffa3ea90da325964dfd4563ce227fdc950dce4f4fcdf8d8eafcd9aaed'},
   {q: 'タブを見てみて',a: 'dfcdfb63a0e9f8ded3dcba6cdb88bddf60e0dacf780b30b054362c61c3324d21'},
   {q: 'ボタンが...?',a: '6e429977a416613aa57a781f5546566661874969fe5b785ac82363262453ac1e'},
-  {q: 'If you want to move on to the next step, write down this word!!!     What is your name? Oh, so it’s Big Name —thanks!    Anyway, I am going to use this for my trading. So, good luck!
-',a: '4f9c86b946d26273b77b7e7355acdb1d64f599604ef6f117e117fa7bf5bffad9'}
+  {q: 'If you want to move on to the next step, write down this word!!! "What is your name? Oh, so it’s Big Name —thanks!"Anyway, I am going to use this for my trading. So, good luck!',a: '4f9c86b946d26273b77b7e7355acdb1d64f599604ef6f117e117fa7bf5bffad9'}
 ];
 let index = 0;
 
