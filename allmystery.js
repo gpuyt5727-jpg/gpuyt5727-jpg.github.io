@@ -17,6 +17,7 @@ let holdTimer = null;
 function showQuestion() {
   questionEl.textContent = questions[index].q;
   passInput.value = '';
+  holdBtn.hidden = index !== 2;
 }
 async function sha256(text) {
   const data = new TextEncoder().encode(text);
