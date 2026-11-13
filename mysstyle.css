@@ -4,3 +4,7 @@
 #mysmsg {
   color:black;
 }
+.mirror{
+  display: inline-block;
+  transform: scaleX(-1);
+}
