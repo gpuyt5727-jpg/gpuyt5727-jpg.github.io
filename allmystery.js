@@ -24,7 +24,7 @@ showQuestion()
 
 passInput.addEventListener('input', async () =>{
   const hash = await sha256(passInput.value.trim());
-  if (passInput.value === questions[index].a) {
+  if (hash === questions[index].a) {
     index++;
     if (index >= questions.length) {
       questionEl.textContent = '全問正解！';
