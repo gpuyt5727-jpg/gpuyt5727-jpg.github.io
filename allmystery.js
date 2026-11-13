@@ -4,5 +4,6 @@ passInput.addEventListener('input', () =>{
   const pass = passInput.value;
   if (pass === 'ExceLVBAiSGoD!!!^v^') {
     mysmsg.textContent = '正解！';
+    mysmsg.classList.remove('hide');
   }
 })
