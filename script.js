@@ -83,23 +83,29 @@ function siren() {
 
 const guessInput = document.querySelector('#guess');
 const goBtn = document.querySelector('#go');
+const againBtn = document.querySelector('#again');
 const msg = document.querySelector('#msg');
 
 let answer = Math.floor(Math.random() * 100) + 1;
-let timesc = 0;
+let tries = 0;
 
 goBtn.addEventListener('click', () => {
   const n = Number(guessInput.value);
-  timesc++;
+  tries++;
   beep();
   if (n < answer) {
     msg.textContent = '答えより小さいよ！';
   } else if (n > answer) {
     msg.textContent = '答えより大きいよ！';
   } else {
-    msg.textContent = `正解！${timesc}回目で当てられたね！`;
+    msg.textContent = `正解！${tries}回目で当てられたね！`;
   }
 });
-
+againBtn.addEventListener('click',() => {
+  answer = Math.floor(Math.random() * 100) + 1;
+  tries = 0;
+  guessInput.value = '';
+  msg.textContent = '';
+});
 document.querySelector('#sound').addEventListener('click',beep);
 document.querySelector('#siren').addEventListener('click',siren);
