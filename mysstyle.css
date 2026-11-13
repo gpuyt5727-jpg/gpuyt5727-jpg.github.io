@@ -1,12 +1,12 @@
 #mysmsg.hide {
-  color:white;
+	color:white;
 }
 #mysmsg {
-  color:black;
+	color:black;
 }
 .mirror{
 	width: fit-content;
 	margin: 0 auto;
- 　 transform: scaleX(-1);
+	transform: scaleX(-1);
 	user-select: none;
 }
