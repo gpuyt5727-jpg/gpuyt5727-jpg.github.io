@@ -12,10 +12,18 @@ function showQuestion() {
   questionEl.textContent = questions[index].q;
   passInput.value = '';
 }
+async function sha256(text) {
+  const data = new TextEncoder().encode(text);
+  const buf = await crypto.subtle.digest('SHA-256', data);
+  return [...new Uint8Array(buf)]
+    .map(b => b.toString(16).padStart(2, '0'))
+    .join('');
+}
 
 showQuestion()
 
-passInput.addEventListener('input', () =>{
+passInput.addEventListener('input', async () =>{
+  const hash = await sha256(passInput.value.trim());
   if (passInput.value === questions[index].a) {
     index++;
     if (index >= questions.length) {
