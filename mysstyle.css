@@ -10,3 +10,12 @@
 	transform: scaleX(-1);
 	user-select: none;
 }
+.narrow{
+	color:white;
+	user-select: none;
+}
+@media (max-width: 450px) {
+	.narrow {
+		color: black;
+	}
+}
