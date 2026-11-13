@@ -7,6 +7,11 @@ let index = 0;
 const passInput = document.querySelector('#password');
 const mysmsg = document.querySelector('#mysmsg');
 const questionEl = document.querySelector('#question');
+const holdBtn = document.querySelector('#hold');
+const hintEl = document.querySelector('#hint');
+
+
+let holdTimer = null;
 
 function showQuestion() {
   questionEl.textContent = questions[index].q;
@@ -36,3 +41,24 @@ passInput.addEventListener('input', async () =>{
     mysmsg.classList.remove('hide');
   }
 });
+
+
+
+holdBtn.addEventListener('pointerdown', () => {
+  holdTimer = setTimeout(() => {
+    holdTimer = null;
+    hintEl.hidden = false;
+    setTimeout(() => {
+      hintEl.hidden = true;
+    }, 300);
+  }, 2000);
+});
+
+function cancelHold() {
+  if (holdTimer === null) return;
+  clearTimeout(holdTimer);
+  holdTimer = null;
+}
+
+holdBtn.addEventListener('pointerup', cancelHold);
+holdBtn.addEventListener('pointerleave', cancelHold);
