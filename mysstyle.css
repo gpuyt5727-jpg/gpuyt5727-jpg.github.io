@@ -35,22 +35,13 @@ body.long {
 	user-select: none;
 }
 
-#red, #blue, #green, #yellow {
-  background-color: #f0f0f0;
+.pad {
+	width: 5rem;
+	height: 5rem;
+	border: none;
+	background: gray;
 }
-
-#red.shine{
-  background-color: red;
-}
-
-#blue.shine{
-  background-color: blue;
-}
-
-#green.shine{
-  background-color: green;
-}
-
-#yellow.shine{
-  background-color: yellow;
-}
+.pad.lit[data-i="0"] { background: red; }
+.pad.lit[data-i="1"] { background: blue; }
+.pad.lit[data-i="2"] { background: green; }
+.pad.lit[data-i="3"] { background: gold; }
