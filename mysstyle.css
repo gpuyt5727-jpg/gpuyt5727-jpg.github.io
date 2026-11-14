@@ -31,5 +31,6 @@ body.long {
 	right: 0;
 	text-align: center;
 	font-size: 0.4rem;
-	color:gray
+	color:gray;
+	user-select: none;
 }
