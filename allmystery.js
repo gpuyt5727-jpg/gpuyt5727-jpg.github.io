@@ -44,7 +44,7 @@ function flash(i){
   pads[i].classList.add('lit');
   setTimeout(() => {
     pads[i].classList.remove('lit');
-  },300);
+  },100);
   }
 
 showQuestion()
