@@ -34,3 +34,23 @@ body.long {
 	color:gray;
 	user-select: none;
 }
+
+#red, #blue, #green, #yellow {
+  background-color: #f0f0f0;
+}
+
+#red.shine{
+  background-color: red;
+}
+
+#blue.shine{
+  background-color: blue;
+}
+
+#green.shine{
+  background-color: green;
+}
+
+#yellow.shine{
+  background-color: yellow;
+}
