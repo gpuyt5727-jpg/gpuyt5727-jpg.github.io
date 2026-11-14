@@ -19,3 +19,17 @@
 		color: black;
 	}
 }
+
+body.long {
+	position: relative;
+	min-height: 3000vh;
+}
+#mid-answer {
+	position: absolute;
+	top: 1800vh;
+	left: 0;
+	right: 0;
+	text-align: center;
+	font-size: 0.4rem;
+	color:gray
+}
